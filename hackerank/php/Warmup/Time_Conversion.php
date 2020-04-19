@@ -6,6 +6,7 @@
  *
  * Complete the timeConversion function below.
  */
+
 function timeConversion($s) {
 
     $hour = substr($s,0, 2);
@@ -23,5 +24,6 @@ function timeConversion($s) {
     }
 
     if($hour==24) $hour = "00";
+
     return $hour . ":" . substr($s,3,5);
 }

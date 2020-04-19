@@ -7,8 +7,8 @@
  * Complete the aVeryBigSum function below
  */
 
-function aVeryBigSum($ar)
-{
+
+function aVeryBigSum($ar) {
     $result = 0;
 
     foreach ($ar as $key => $value) {

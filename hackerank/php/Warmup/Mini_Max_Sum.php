@@ -8,6 +8,7 @@
  */
 
 function miniMaxSum($arr) {
+
     $min = min($arr);
     $max = max($arr);
     $sum = 0;
@@ -19,4 +20,5 @@ function miniMaxSum($arr) {
     $display_min = $sum-$min;
 
     echo  "{$display_max} {$display_min}";
+
 }

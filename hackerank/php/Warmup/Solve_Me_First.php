@@ -9,6 +9,7 @@ function solveMeFirst($a,$b){
   return $a + $b;
 
 }
+
 $handle = fopen ("php://stdin","r");
 $_a = fgets($handle);
 $_b = fgets($handle);

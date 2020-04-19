@@ -10,6 +10,7 @@
  */
 
 function gradingStudents($grades) {
+
     $return = [];
 
     //Round up grades

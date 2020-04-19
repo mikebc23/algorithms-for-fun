@@ -5,6 +5,7 @@
  *
  * Complete the countApplesAndOranges function below.
  */
+
 function countApplesAndOranges($s, $t, $a, $b, $apples, $oranges) {
     // A negative value of  means the fruit fell  units to the tree's left
     // Positive value of  means it falls units to the tree's right.

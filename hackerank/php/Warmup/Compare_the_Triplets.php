@@ -7,10 +7,12 @@
  */
 
 function compareTriplets($a, $b) {
+
     #Initialize final score
     $score_a = 0;
     $score_b = 0;
     $array_max_length = $a;
+
     switch(count($a) <=> count($b)) {
         case 1:
             $array_max_length = $b;
@@ -19,6 +21,7 @@ function compareTriplets($a, $b) {
             $array_max_length = $a;
             break;
     }
+
     for($i=0;$i<=count($array_max_length)-1; $i++) {
         switch($a[$i] <=> $b[$i]){
             case 0:

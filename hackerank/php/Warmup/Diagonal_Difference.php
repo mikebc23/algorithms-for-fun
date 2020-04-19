@@ -12,6 +12,7 @@
  */
 
 function diagonalDifference($arr) {
+
     //Getting the array dimension
     $dimension = count($arr);
 

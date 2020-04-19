@@ -6,13 +6,12 @@
  * Complete the birthdayCakeCandles function below.
  */
 
-function birthdayCakeCandles($ar)
-{
+function birthdayCakeCandles($ar) {
     $max = max($ar);
     $count = 0;
     for ($i = 0; $i <= count($ar) - 1; $i++) {
         if ($ar[$i] == $max) $count++;
     }
-    return $count;
 
+    return $count;
 }
