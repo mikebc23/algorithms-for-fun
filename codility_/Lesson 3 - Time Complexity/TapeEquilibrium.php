@@ -1,4 +1,5 @@
 <?php
+
 /* 
  * TapeEquilibrium
  * Minimize the value |(A[0] + ... + A[P-1]) - (A[P] + ... + A[N-1])|.
@@ -59,25 +60,23 @@
  * Solution by Michael Barquero <@mikebc23>
  */
 
-function solution($A) {
-    
-    $len = count($A);
-    
-    if (!$A) return 0;
+// you can write to stdout for debugging purposes, e.g.
+// print "this is a debug message\n";
 
-    $totalSum = array_sum($A);
-    $sumLeft = 0;
+function solution($A) {
+    $sumAllElements = array_sum($A);
+    $numberElements = count($A);
     
-    $minValue = PHP_INT_MAX; 
-    
-    for($i=0; $i<=$len-1; $i++) {
-        
-        $sumLeft += $A[$i];
-        $diff = abs(2 * $sumLeft - $totalSum);
-        
-        $minValue = min($minValue, $diff);
+    $minDiff = PHP_INT_MAX;
+    $currentDiff  = PHP_INT_MAX;
+    $sumFirstPart = 0;
+    $sumSecondPart = 0;
+
+    for($i=0; $i<$numberElements-1; $i++) {
+      $sumFirstPart += $A[$i];
+      $sumSecondPart = $sumAllElements - $sumFirstPart;
+      $currentDiff= (int) abs($sumFirstPart - $sumSecondPart);
+      $minDiff = min($currentDiff, $minDiff);
     }
-    
-    return $minValue;
-    
+    return $minDiff;
 }
